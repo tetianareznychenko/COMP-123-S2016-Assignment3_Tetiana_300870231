@@ -8,5 +8,6 @@ namespace Assignment03_COMP_123_Tetiana_300870231
     public interface IHasMoons
     {
         void HasMoons();
+        
     }
 }

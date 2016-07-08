@@ -7,21 +7,38 @@ namespace Assignment03_COMP_123_Tetiana_300870231
 {
     public class GiantPlanet : Planet, IHasMoons, IHasRings
     {
-        private int _type;
+        private string _type;
 
-        public GiantPlanet()
+        public GiantPlanet(double diameter, double mass, string name, int moonCount, double orbitalPeriod, int ringCount, 
+            double rotationPeriod,  string type)
+            : base (diameter, mass, name)
         {
-            throw new System.NotImplementedException();
+            this._type = type;
         }
 
         public void HasMoons()
         {
-            throw new System.NotImplementedException();
+            if (MoonCount > 0)
+            {
+                Console.WriteLine("{0} has moons", this.Name);
+            }
+            else
+            {
+                Console.WriteLine("{0} does not have moons", this.Name);
+            }
         }
 
         public void HasRings()
         {
-            throw new System.NotImplementedException();
+            if (RingCount > 0)
+            {
+                Console.WriteLine("{0} has rings", this.Name);
+            }
+            else
+            {
+                Console.WriteLine("{0} does not have rings", this.Name);
+            }
         }
     }
+
 }
