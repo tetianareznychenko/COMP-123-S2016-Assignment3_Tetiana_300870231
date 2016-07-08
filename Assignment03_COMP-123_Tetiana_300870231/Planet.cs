@@ -123,11 +123,20 @@ namespace Assignment03_COMP_123_Tetiana_300870231
             this._diameter = diameter;
             this._mass= mass; 
         }
-
-
-        public void ToString()
+        /**<summary>
+         * This is the public override string ToString() method that outputs Name, Diameter and
+         * Mass to the Console 
+         * </summary>
+         */
+        public override string ToString()
         {
-            throw new System.NotImplementedException();
+            string returnString = "******************************";
+            returnString += "Name: " + this.Name;
+            returnString += "Diameter: " + this.Diameter;
+            returnString += "Mass: " + this.Mass;
+            returnString += "************************************";
+
+            return returnString;
         }
     }
 }
