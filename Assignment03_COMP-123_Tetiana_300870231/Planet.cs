@@ -117,24 +117,29 @@ namespace Assignment03_COMP_123_Tetiana_300870231
          * @param {string} name
          * 
          */
-        public Planet(double diameter, double mass, string name)
+        public Planet(double diameter, double mass, string name, int moonCount, int ringCount)
         {
             this._name = name;
             this._diameter = diameter;
-            this._mass= mass; 
+            this._mass= mass;
+            this._moonCount = moonCount;
+            this._ringCount = ringCount;
         }
         /**<summary>
          * This is the public override string ToString() method that outputs Name, Diameter and
          * Mass to the Console 
          * </summary>
          */
+
+        //PUBLIC METHODS+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public override string ToString()
         {
+            Console.WriteLine("******************************");
+            Console.WriteLine("Name: " + this.Name);
+            Console.WriteLine("Diameter (km): " + this.Diameter);
+            Console.WriteLine("Mass (*10^22 kg): " + this.Mass);
+            Console.WriteLine("******************************");
             string returnString = "******************************";
-            returnString += "Name: " + this.Name;
-            returnString += "Diameter: " + this.Diameter;
-            returnString += "Mass: " + this.Mass;
-            returnString += "************************************";
 
             return returnString;
         }

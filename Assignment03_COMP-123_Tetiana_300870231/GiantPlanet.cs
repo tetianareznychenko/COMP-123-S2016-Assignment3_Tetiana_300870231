@@ -7,38 +7,65 @@ namespace Assignment03_COMP_123_Tetiana_300870231
 {
     public class GiantPlanet : Planet, IHasMoons, IHasRings
     {
+        //PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private string _type;
 
-        public GiantPlanet(double diameter, double mass, string name, int moonCount, double orbitalPeriod, int ringCount, 
-            double rotationPeriod,  string type)
-            : base (diameter, mass, name)
+        //CONSTRUCTORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public GiantPlanet(double diameter, double mass, string name, int moonCount, int ringCount, string type)
+            : base (diameter, mass, name, moonCount, ringCount)
         {
-            this._type = type;
+            
+        }
+        //PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public string ypeT
+        {
+            get
+            {
+                return this._type;
+            }
+            set
+            {
+                this._type = value;
+            }
         }
 
-        public void HasMoons()
+        //PUBLIC METHODS+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        /**
+         * <summary>
+         * HasMoons method that will return true if the MoonCount property is greater than zero
+         * </summary>
+         * 
+         * @method HasMoons
+         * @return {bool}
+         */
+        public bool HasMoons()
         {
-            if (MoonCount > 0)
+            
+            if (MoonCount > 0 )
             {
-                Console.WriteLine("{0} has moons", this.Name);
+                return (true);
             }
-            else
-            {
-                Console.WriteLine("{0} does not have moons", this.Name);
-            }
-        }
 
-        public void HasRings()
+            return false;
+        }
+        /**
+         * <summary>
+         * HasRings method that will return true if the RingCount property is greater than zero
+         * </summary>
+         * 
+         * @method HasRings
+         * @return {bool}
+         */
+        public bool HasRings()
         {
             if (RingCount > 0)
             {
-                Console.WriteLine("{0} has rings", this.Name);
+                return true;
             }
-            else
-            {
-                Console.WriteLine("{0} does not have rings", this.Name);
-            }
+
+            return false;
+        }
         }
     }
 
-}
+

@@ -7,6 +7,6 @@ namespace Assignment03_COMP_123_Tetiana_300870231
 {
     public interface IHabitable
     {
-        void Habitable();
+        bool Habitable(); 
     }
 }
